@@ -12,7 +12,9 @@ const app = express();
 
 // middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: "https://flyviation.netlify.app",
+}));
 
 const FLIGHT_API_URL = process.env.FLIGHT_API_URL;
 
