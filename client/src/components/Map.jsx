@@ -37,7 +37,7 @@ const Map = () => {
         const intervalId = setInterval(getLiveFlights, 3000);
 
         return () => {
-            console.log("Interval cleared")
+            // console.log("Interval cleared")
             clearInterval(intervalId);
         }
 

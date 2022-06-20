@@ -15,7 +15,6 @@ const SpecificFlight = ({ flightId, removeSpecificFlight }) => {
     const [specificFlight, setSpecificFlight] = useState(null)
 
     const timeFormater = (time, offset) => {
-        console.log(time, offset);
         return moment.unix(time).utc().utcOffset(offset).format("HH:mm")
     };
 
@@ -45,13 +44,13 @@ const SpecificFlight = ({ flightId, removeSpecificFlight }) => {
         const intervalId = setInterval(getSpecificFlight, 3000);
 
         return () => {
-            console.log("Interval cleared SPECIFIC FLIGHT")
+            // console.log("Interval cleared SPECIFIC FLIGHT")
             clearInterval(intervalId);
         }
 
     }, [specificFlight])
 
-    console.log("RENDERING SPECIFIC FLIGHT component");
+    // console.log("RENDERING SPECIFIC FLIGHT component");
 
 
 
