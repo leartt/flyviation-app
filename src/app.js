@@ -64,9 +64,7 @@ app.get('/api/v1/flights/:id', async (req, res) => {
   try {
     const { id } = req.params;
 
-    const { data: flights } = await axios.get(
-      `http://localhost:${PORT}/api/v1/flights`
-    );
+    const { data: flights } = await axios.get(`/api/v1/flights`);
     const specificFlight = flights.flights.find((f) => f?.flightId === id);
 
     const { data } = await axios.get(
